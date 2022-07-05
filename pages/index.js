@@ -48,6 +48,7 @@ export default function Home() {
     const proof = tree.getHexProof(leaf);
     console.log(proof)
     
+    
     const {
     runContractFunction: preSaleMint,
     data: enterTxResponse, isLoading
@@ -221,14 +222,14 @@ export default function Home() {
         {live ? (supportedChains == chainId ? (
                 <>
                     <button
-                        className="btn btn-outline-primary py-2 m-auto w-50 "
+                        className="btn btn-success py-2 m-auto w-50 fs-2 mt-2 text-white-100 "
                         onClick={Greatmint}
                         disabled={isLoading || isFetching}
                     >
                         {isLoading || isFetching ? (
                             <div className="animate-spin spinner-border h-8 w-8 border-b-2 rounded-full" ></div>
                         ) : (
-                            "mint"
+                            "Mint"
                         )}
                     </button>
                 </>
