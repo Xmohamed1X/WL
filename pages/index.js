@@ -46,8 +46,7 @@ export default function Home() {
     const tree = new MerkleTree(leaves,keccak256,{ sort: true });
     const leaf = keccak256(account);
     const proof = tree.getHexProof(leaf);
-    console.log(proof)
-    
+
     
     const {
     runContractFunction: preSaleMint,
