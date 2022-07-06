@@ -92,7 +92,7 @@ export default function Home() {
     useEffect(() => {
         if (isWeb3Enabled) {
           updateUIValues()
-          setWL(true);
+          setWL(false);
           setpriceWL(290000000000000000*quantity)
           setpriceb(590000000000000000*quantity) 
         }
