@@ -19,7 +19,7 @@ export default function Home() {
     const [WL, setWL] = useState();
     const [quantity, setquantity] = useState(1)
     const [priceWL, setpriceWL] = useState(290000000000000000)
-    const [priceb, setpriceb] = useState(590000000000000000)
+    const [priceb, setpriceb] = useState(490000000000000000)
     const [totalSupply, setTotalSupply] = useState("0")
     const { Moralis, isWeb3Enabled,account , chainId: chainIdHex } = useMoralis()
     const chainId = parseInt(chainIdHex)
@@ -94,7 +94,7 @@ export default function Home() {
           updateUIValues()
           setWL(false);
           setpriceWL(290000000000000000*quantity)
-          setpriceb(590000000000000000*quantity) 
+          setpriceb(490000000000000000*quantity)
         }
         setlive(true)
     }, [live,isWeb3Enabled,quantity])
@@ -214,7 +214,7 @@ export default function Home() {
 			<section className="text text-white text-center mt-5">
 				{live ? (<h1 className="fw-bold display-1"id="h1">Mint is Live</h1>) : ( <h1 className="fw-bold display-1"id="h1"> Mint Date July 5th 8PM Eastern</h1>)}
 				{live ? (supportedChains == chainId ? ((isWeb3Enabled) ? <h2 className="mt-5 fs-1 fw-bold"> {totalSupply}/800</h2> : <h2 ></h2>) : <h2></h2>) : <div></div>}
-				{live ? (supportedChains == chainId ? (isWeb3Enabled ? (WL ? (<h2 className="mt-5 fs-1 fw-bold">0.29 ETH</h2>) : (<h2 className="mt-1 fs-1 fw-bold"> 0.59 ETH</h2>)) : <h2> </h2>) : <h2></h2>) : <div></div>}
+				{live ? (supportedChains == chainId ? (isWeb3Enabled ? (WL ? (<h2 className="mt-5 fs-1 fw-bold">0.29 ETH</h2>) : (<h2 className="mt-1 fs-1 fw-bold"> 0.49 ETH</h2>)) : <h2> </h2>) : <h2></h2>) : <div></div>}
 			
 				<div className="mt-3 text-center">
         {live ? (supportedChains == chainId ? (
