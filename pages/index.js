@@ -96,7 +96,7 @@ export default function Home() {
           setpriceWL(290000000000000000*quantity)
           setpriceb(490000000000000000*quantity)
         }
-        setlive(true)
+        setlive(false)
     }, [live,isWeb3Enabled,quantity])
 
     const handleNewNotification = () => {
@@ -206,13 +206,13 @@ export default function Home() {
               </nav>
         </div>
       {/* Header */}
-      <main className="wrapper mt-3">
+      <main className="wrapper mt-3 algin-items-center">
 			<section className="image shadow-lg py-3 rounded">
 				<img src="images/img4.jpeg" alt="" />
 			</section>
 
 			<section className="text text-white text-center mt-5">
-				{live ? (<h1 className="fw-bold display-1"id="h1">Mint is Live</h1>) : ( <h1 className="fw-bold display-1"id="h1"> Mint Date July 5th 8PM Eastern</h1>)}
+				{live ? (<h1 className="fw-bold display-1"id="h1">Mint is Live</h1>) : ( <h1 className="fw-bold display-1"id="h1">Mint is Close</h1>)}
 				{live ? (supportedChains == chainId ? ((isWeb3Enabled) ? <h2 className="mt-5 fs-1 fw-bold"> {totalSupply}/800</h2> : <h2 ></h2>) : <h2></h2>) : <div></div>}
 				{live ? (supportedChains == chainId ? (isWeb3Enabled ? (WL ? (<h2 className="mt-5 fs-1 fw-bold">0.29 ETH</h2>) : (<h2 className="mt-1 fs-1 fw-bold"> 0.49 ETH</h2>)) : <h2> </h2>) : <h2></h2>) : <div></div>}
 			
